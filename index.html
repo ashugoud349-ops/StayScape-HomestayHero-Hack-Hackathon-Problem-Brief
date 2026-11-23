@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#123c32" />
+  <meta name="description" content="StayScape — find verified, authentic homestays and local experiences." />
+  <title>StayScape | Stay closer to the real place</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">S</span><span>stay<span class="brand-light">scape</span><small>STAY CLOSER TO THE REAL PLACE</small></span></a>
+    <nav><a href="#explore">Explore stays</a><a href="#how">How it works</a><a href="#host">Become a host</a></nav>
+    <div class="nav-actions"><button class="text-btn" id="myBookingsBtn">My bookings</button><button class="btn btn-dark" id="hostBtn">Host portal ↗</button></div>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> SLOW TRAVEL. REAL CONNECTIONS.</div>
+        <h1>Find a stay.<br><em>Feel a place.</em></h1>
+        <p>Discover thoughtful homestays hosted by local families. Verified places, meaningful experiences, and stories worth bringing home.</p>
+        <a class="btn btn-light" href="#explore">Explore homestays <span>↗</span></a>
+        <div class="hero-proof"><div class="avatar-stack"><i> A </i><i> R </i><i> M </i><i> + </i></div><span><b>Local hosts, real stories</b><small>Stay with confidence</small></span></div>
+      </div>
+      <div class="hero-image"><div class="hero-image-label"><span class="dot"></span> THE COORG HIGHLANDS <small>Western Ghats, India</small></div><div class="hero-note">A little closer<br>to what matters.</div></div>
+      <div class="hero-stats"><div><b>12</b><span>Curated stays</span></div><div><b>100%</b><span>Host-first approach</span></div><div><b>Local</b><span>Experiences included</span></div></div>
+    </section>
+
+    <section class="search-wrap" id="explore">
+      <div class="section-kicker">YOUR NEXT CHAPTER STARTS HERE</div>
+      <div class="search-panel">
+        <label class="search-field"><span>DESTINATION</span><input id="searchInput" placeholder="Where do you want to go?" /></label>
+        <label class="search-field"><span>STAY TYPE</span><select id="typeFilter"><option value="">All experiences</option><option>Coffee Estate</option><option>Forest Treehouse</option><option>Hill Cottage</option><option>Coastal Homestay</option><option>Heritage Homestay</option><option>Tea Estate</option></select></label>
+        <label class="search-field"><span>GUESTS</span><select id="guestFilter"><option value="1">1 guest</option><option value="2" selected>2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option></select></label>
+        <button class="btn btn-green" id="searchBtn">Find my stay <span>→</span></button>
+      </div>
+      <div class="catalog-heading"><div><div class="section-kicker">STAYS WITH A STORY</div><h2>Somewhere worth <em>staying.</em></h2></div><div class="filter-row"><button class="chip active" data-filter="all">All stays</button><button class="chip" data-filter="verified">Verified only <span>✓</span></button><button class="chip" data-filter="under3000">Under ₹3,000</button></div></div>
+      <div id="stayGrid" class="stay-grid"><div class="loading">Finding lovely places for you…</div></div>
+    </section>
+
+    <section class="trust-band" id="how"><div class="trust-icon">✳</div><div><div class="section-kicker">TRAVEL WITH PEACE OF MIND</div><h2>Real homes. <em>Verified hosts.</em></h2><p>Every verified badge means the host's identity and property documents have been reviewed in our demo verification process.</p></div><div class="trust-points"><div>✓ Government ID reviewed</div><div>✓ Property proof reviewed</div><div>✓ Clear booking details</div></div></section>
+
+    <section class="host-section" id="host"><div class="host-photo"></div><div class="host-copy"><div class="section-kicker">YOUR HOME HAS A STORY TOO</div><h2>Share your place.<br><em>Keep your roots.</em></h2><p>Welcome travellers into your world. Submit your details for a simple, transparent verification review and manage your homestay bookings.</p><button class="btn btn-dark" id="becomeHostBtn">Start host verification ↗</button></div></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">S</span><span>stay<span class="brand-light">scape</span><small>STAY CLOSER TO THE REAL PLACE</small></span></a><span>Made for meaningful journeys. © 2026 StayScape</span><span>HomestayHero Hackathon Prototype</span></footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div id="modalContent"></div></section></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
